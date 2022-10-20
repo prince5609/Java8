@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class CreateList {
     static List<Integer> list1 = List.of(1,2,3,4,5,6,7,8,9);
@@ -22,10 +21,11 @@ public class CreateList {
         return listEven;
     }
 
-    public static List<Integer> printEvenWithStream(List<Integer>list){
+    // New way to get even number (With Stream)
+    public static List<Integer> printEvenWithStream(List<Integer> list){
 //        Stream<Integer> stream = list.stream();
 //        return stream.filter(i-> i % 2 == 0).collect(Collectors.toList());
-        return list1.stream().filter(i-> i % 2 == 0).collect(Collectors.toList());
+        return list.stream().filter(i-> i % 2 == 0).collect(Collectors.toList());
     }
 
     public static List<Integer> numGreaterThen15(List<Integer> list){
